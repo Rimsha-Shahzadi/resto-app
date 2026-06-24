@@ -3,7 +3,7 @@ const RestaurantHeader=()=>{
     return(
         <div>
            <div className="logo">
-            <Image  style={{width:100}}src="https://stock.adobe.com/search?k=food+delivery" />
+            <img  style={{width:100}}src="https://stock.adobe.com/search?k=food+delivery" />
            </div>
            <ul>
             <li>
