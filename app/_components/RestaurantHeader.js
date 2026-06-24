@@ -5,7 +5,7 @@ const RestaurantHeader=()=>{
     return(
         <div>
            <div className="logo">
-            <Image  style={{width:100}}src="code" />
+            <Image  style={{width:100}}src="" />
            </div>
            <ul>
             <li>
