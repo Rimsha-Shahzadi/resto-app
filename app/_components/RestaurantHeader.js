@@ -1,11 +1,9 @@
 import Link from "next/link";
-// import Image from "next/image";
-// import code from "../public/code.jpeg"
 const RestaurantHeader=()=>{
     return(
         <div>
            <div className="logo">
-            <Image  style={{width:100}}src="" />
+            <Image  style={{width:100}}src="https://stock.adobe.com/search?k=food+delivery" />
            </div>
            <ul>
             <li>
