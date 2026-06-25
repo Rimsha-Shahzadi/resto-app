@@ -9,18 +9,13 @@ const RestaurantHeader=()=>{
          <Image src="/image.jpg"alt="Food Delivery Logo"width={100}height={100}/>
           </div>
            </div>
-
            <ul>
             <li>
                 <Link href="/">Home</Link>
             </li>
-           </ul>
-            <ul>
             <li>
                 <Link href="/">Login/SignUp</Link>
             </li>
-           </ul>
-            <ul>
             <li>
                 <Link href="/">Profile</Link>
             </li>
