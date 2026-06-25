@@ -9,7 +9,7 @@ const Restaurant=()=>{
     return(
         <>
         <div className="container">
-            <RestaurantHeader/>
+        <RestaurantHeader />
       <h1>Restaurant Login/SignUp Page</h1>
       {
         login? <RestaurantLogin/>:<RestaurantSignUp/>
