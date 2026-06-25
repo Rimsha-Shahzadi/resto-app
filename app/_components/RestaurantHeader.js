@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const RestaurantHeader=()=>{
     return(
-        <div>
+        <div className="header-wrapper">
            <div className="logo"> 
             <div className="logo">            
          <Image src="/image.jpg"alt="Food Delivery Logo"width={100}height={100}/>

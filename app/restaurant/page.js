@@ -1,9 +1,10 @@
 'use client'
 import { useState } from "react";
-import RestaurantLogin from "../_components/restaurantLogin";
-import RestaurantSignUp from "../_components/restaurantSignUp";
+import RestaurantLogin from "../_components/RestaurantLogin";
+import RestaurantSignUp from "../_components/RrestaurantSignUp";
 import RestaurantHeader from "../_components/RestaurantHeader";
- 
+import RestaurantFooter from "../_components/RestaurantFooter";
+import './style.css';
 const Restaurant=()=>{
     const [login,setLogin]=useState(true);
     return(
@@ -21,6 +22,7 @@ const Restaurant=()=>{
      </button>
      </div>
      </div>
+      <RestaurantFooter />
     </>
     )
 }
