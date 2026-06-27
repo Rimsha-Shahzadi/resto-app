@@ -1,6 +1,6 @@
 // import { restaurantSchema } from "@/app/lib/restaurantModel";
 // import { connectionStr } from "@/app/lib/db";
-import { restaurantSchema } from "@/app/lib/restaurantsModel";
+import { restaurantSchema } from "@/app/lib/restaurantModel";
 import { connectionStr } from "@/app/lib/db";
 import { NextResponse } from "next/server";
 import mongoose  from "mongoose";
@@ -10,3 +10,4 @@ export async function GET(){
     console.log(data);
 return NextResponse.json({result:true})
 }
+
