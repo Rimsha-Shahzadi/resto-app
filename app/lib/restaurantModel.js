@@ -1,4 +1,4 @@
-const { defaullt: mongoose } = require("mongoose");
+const { default: mongoose } = require("mongoose");
 
 
 const restaurantModel = new mongoose.Schema({
@@ -6,4 +6,4 @@ const restaurantModel = new mongoose.Schema({
 });
 
 export const restaurantScheme = mongoose.models.restaurants
-|| mongoose.model("restaurants",restaurantModel)
+|| mongoose.model("restaurants",restaurantModel);
