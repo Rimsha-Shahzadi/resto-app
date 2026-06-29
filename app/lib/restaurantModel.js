@@ -1,13 +1,39 @@
-const { default: mongoose } = require("mongoose");
+// const { default: mongoose } = require("mongoose");
 
 
-const restaurantModel = new mongoose.Schema({
-    name:String,
-    email: String,
-    address: String,
-    contact: String,
-    city: String,
-});
+// const restaurantModel = new mongoose.Schema({
+//     name:String,
+//     email: String,
+//     address: String,
+//     contact: String,
+//     city: String,
+// });
 
-export const restaurantScheme = mongoose.models.restaurants
-|| mongoose.model("restaurants",restaurantModel);
+// export const restaurantScheme = mongoose.models.restaurants
+// || mongoose.model("restaurants",restaurantModel);
+
+import mongoose from 'mongoose';
+
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+    throw new Error('Please define the MONGODB_URI environment variable');
+}
+
+let cached = global.mongoose;
+
+if (!cached) {
+    cached = global.mongoose = { conn: null, promise: null };
+}
+
+export async function connectToDatabase() {
+    if (cached.conn) return cached.conn;
+
+    if (!cached.promise) {
+        cached.promise = mongoose.connect(MONGODB_URI)
+            .then(mongoose => mongoose);
+    }
+
+    cached.conn = await cached.promise;
+    return cached.conn;
+}
