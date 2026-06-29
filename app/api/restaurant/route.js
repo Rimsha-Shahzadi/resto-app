@@ -11,22 +11,22 @@
 // return NextResponse.json({result:true})
 // }
 
-// import { restaurantScheme } from "@/app/lib/restaurantModel";
-// import { connectionStr } from "@/app/lib/db";
-// import { NextResponse } from "next/server";
-// import mongoose from "mongoose";
+import { restaurantScheme } from "@/app/lib/restaurantModel";
+import { connectionStr } from "@/app/lib/db";
+import { NextResponse } from "next/server";
+import mongoose from "mongoose";
 
-// export async function GET() {
-//     await mongoose.connect(connectionStr);
+export async function GET() {
+    await mongoose.connect(connectionStr);
 
-//     const data = await restaurantScheme.find();
-//     console.log(data);
+    const data = await restaurantScheme.find();
+    console.log(data);
 
-//     return NextResponse.json({
-//         result: data,
-//         success: true
-//     });
-// }
+    return NextResponse.json({
+        result: data,
+        success: true
+    });
+}
 
 // import mongoose from 'mongoose';
 // import restaurantScheme from '@/models/restaurantModel'; // adjust path
@@ -47,13 +47,13 @@
 //     } catch (error) {
 //         console.error(error);
 //         return Response.json({ error: error.message }, { status: 500 });
-//     }
-// }
-
-import { connectToDatabase } from '@/lib/mongodb';
-
-export async function GET() {
-    await connectToDatabase();
-    const data = await restaurantScheme.find();
-    return Response.json(data);
+    }
 }
+
+// import { connectToDatabase } from '@/lib/mongodb';
+
+// export async function GET() {
+//     await connectToDatabase();
+//     const data = await restaurantScheme.find();
+//     return Response.json(data);
+// }
