@@ -18,15 +18,14 @@ import mongoose from "mongoose";
 
 export async function GET() {
     await mongoose.connect(connectionStr);
-
     const data = await restaurantScheme.find();
     console.log(data);
-
-    return NextResponse.json({
-        result: data,
-        success: true
-    });
+return NextResponse.json({result: data})
 }
+export async function POST() {
+   return NextResponse.json({result:true})
+}
+
 
 // import mongoose from 'mongoose';
 // import restaurantScheme from '@/models/restaurantModel'; // adjust path
@@ -47,8 +46,8 @@ export async function GET() {
 //     } catch (error) {
 //         console.error(error);
 //         return Response.json({ error: error.message }, { status: 500 });
-    }
-}
+//     }
+// }
 
 // import { connectToDatabase } from '@/lib/mongodb';
 

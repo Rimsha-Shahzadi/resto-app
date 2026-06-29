@@ -1,4 +1,4 @@
-const { default: mongoose } = NodeJs.require("mongoose");
+const { default: mongoose } = require("mongoose");
 
 
 const restaurantModel = new mongoose.Schema({
