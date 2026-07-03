@@ -5,5 +5,5 @@ export const connectionStr="mongodb+srv://"+username+":"+password+"@cluster0.y2g
 
 // export const  connectionStr  = "mongodb+srv://"+username+":"+password+"@cluster0.abcde.mongodb.net/restodb";
 
-// export const connectionStr =
-// "mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/restodb?retryWrites=true&w=majority";
+export const connectionStr =
+"mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/restodb?retryWrites=true&w=majority";
