@@ -27,11 +27,11 @@ const RestaurantSignUp=()=>{
           value={email} onChange={(event)=>setEmail(event.target.value)}/>
           </div>
           <div className="input-wrapper">
-          <input type="text" placeholder="Enter Password"  className="input-field"
+          <input type="password" placeholder="Enter Password"  className="input-field"
           value={text} onChange={(event)=>setText(event.target.value)}/>
           </div >
           <div className="input-wrapper"> 
-          <input type="text" placeholder="Confirm Password"  className="input-field"
+          <input type="password" placeholder="Confirm Password"  className="input-field"
           value={password} onChange={(event)=>setPassword(event.target.value)}/>
           </div>
           <div className="input-wrapper">
