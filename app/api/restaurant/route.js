@@ -1,4 +1,3 @@
-
 import { restaurantScheme } from "@/app/lib/restaurantModel";
 import { connectionStr } from "@/app/lib/db";
 import { NextResponse } from "next/server";
