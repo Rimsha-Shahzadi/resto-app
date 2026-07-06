@@ -27,31 +27,31 @@ const RestaurantSignUp=()=>{
           value={email} onChange={(event)=>setEmail(event.target.value)}/>
           </div>
           <div className="input-wrapper">
-          <input type="password" placeholder="Enter Password"  className="input-field"
-          value={email} onChange={(event)=>setEmail(event.target.value)}/>
+          <input type="text" placeholder="Enter Password"  className="input-field"
+          value={text} onChange={(event)=>setText(event.target.value)}/>
           </div >
           <div className="input-wrapper"> 
-          <input type="password" placeholder="Confirm Password"  className="input-field"
+          <input type="text" placeholder="Confirm Password"  className="input-field"
           value={password} onChange={(event)=>setPassword(event.target.value)}/>
           </div>
           <div className="input-wrapper">
-          <input type="password" placeholder="Enter restaurant name"  className="input-field"
+          <input type="text" placeholder="Enter restaurant name"  className="input-field"
           value={c_password} onChange={(event)=>setC_password(event.target.value)}/>
           </div >
           <div className="input-wrapper">
-          <input type="password" placeholder="Enter city"  className="input-field"
+          <input type="text" placeholder="Enter city"  className="input-field"
           value={name} onChange={(event)=>setName(event.target.value)}/>
           </div >
           <div className="input-wrapper">
-          <input type="password" placeholder="Enter full address"  className="input-field"
+          <input type="text" placeholder="Enter full address"  className="input-field"
           value={city} onChange={(event)=>setCity(event.target.value)}/>
           </div >
           <div className="input-wrapper">
-          <input type="password" placeholder="Enter Contact No"  className="input-field"
+          <input type="text" placeholder="Enter Contact No"  className="input-field"
           value={address} onChange={(event)=>setAddress(event.target.value)}/>
           </div >
           <div className="input-wrapper">
-          <input type="password" placeholder="Enter Contact No"  className="input-field"
+          <input type="text" placeholder="Enter Contact No"  className="input-field"
           value={contact} onChange={(event)=>setContact(event.target.value)}/>
           </div >
           
