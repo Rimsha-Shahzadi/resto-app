@@ -1,24 +1,34 @@
 import  { useState } from "react";
+import { useRouter } from "next/navigation";
 const RestaurantSignUp=()=>{
+    const [contact, setContact] = useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [c_password,setC_password]=useState("");
     const [name,setName]=useState("");
     const [city,setCity]=useState("");
     const [address,setAddress]=useState("");
-    const [contact,setContact]=useState("");
     const [text, setText] = useState("");
+    const router = useRouter();
 
 
     const handleSignUp=async ()=>{
         console.log(email,password,c_password,name,city,address,contact);
-        let result= await fetch("http://localhost:3000/api/restaurant",{
+        let response= await fetch("http://localhost:3000/api/restaurant",{
             method:"POST",
             body:JSON.stringify({email,password,name,city,address,contact}),
       })
-        result = await result.json();
-        console.log(result);
+        response = await response.json();
+        console.log(response);
+        if(response.success){
+          console.log(response);
+          const {reslut}= response;
+          delete reslut.password;
+          localStorage.setItem("restaurantUser",JSON.stringify(reslut));
+          router.push("/restaurant/dashboard");
+        }
   }
+
     return(
         <>
         {/* <h1>SignUp component</h1> */}
@@ -52,15 +62,15 @@ const RestaurantSignUp=()=>{
           <input type="text" placeholder="Enter Contact No"  className="input-field"
           value={address} onChange={(event)=>setAddress(event.target.value)}/>
           </div >
-          <div className="input-wrapper">
+          {/* <div className="input-wrapper">
           <input type="text" placeholder="Enter Contact No"  className="input-field"
-          value={contact} onChange={(event)=>setContact(event.target.value)}/>
+          value={contact} onChange={(event)=>setContact(event.target.value)}/> */}
           </div >
           
           <div className="input-wrapper"> 
           <button className="button" onClick={handleSignUp}>SignUp</button>
           </div>
-        </div>
+        {/* </div> */}
         </>
     )
 }
