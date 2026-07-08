@@ -1,6 +1,5 @@
 const { default: mongoose } = require("mongoose");
 
-
 const restaurantModel = new mongoose.Schema({
     name:String,
     email:String,

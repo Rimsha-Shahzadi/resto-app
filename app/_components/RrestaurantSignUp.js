@@ -7,6 +7,8 @@ const RestaurantSignUp=()=>{
     const [city,setCity]=useState("");
     const [address,setAddress]=useState("");
     const [contact,setContact]=useState("");
+    const [text, setText] = useState("");
+
 
     const handleSignUp=async ()=>{
         console.log(email,password,c_password,name,city,address,contact);
