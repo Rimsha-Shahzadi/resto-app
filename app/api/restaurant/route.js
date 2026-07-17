@@ -13,3 +13,10 @@ return NextResponse.json({result: data})
 export async function POST() {
    return NextResponse.json({result:true})
 }
+export async function POST() {
+   return NextResponse.json({result:true})
+}
+export async function POST() {
+   return NextResponse.json({result:true})
+}
+
